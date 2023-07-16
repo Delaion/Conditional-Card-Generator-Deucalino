@@ -36,12 +36,16 @@ function render(variables = {}) {
               <h1> ${variables.name ||
                 "Antonia Javiera   "} ${variables.lastname ||
     "Benito"}</h1>       <h2> ${variables.role || "Web Developer"}</h2>
-          <h3> ${variables.city}Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <h3> ${variables.city || "Miami"}, ${variables.country || "USA"}</h3>
+          <ul class="position-right ${variables.socialMediaPosition}">
+            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i>${variables.twitter ||
+              "@Javiera39574617"}</a></li>
+            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i>${variables.github ||
+              "Antonia Javiera Benito"}</a></li>
+            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i>${variables.linkedin ||
+              "Antonia Javiera Benito"}</a></li>
+            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i>${variables.instagram ||
+              "@Javiera39574617"}</a></li>
           </ul>
         </div>
     `;
